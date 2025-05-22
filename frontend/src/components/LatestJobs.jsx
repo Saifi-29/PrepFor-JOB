@@ -6,7 +6,7 @@ const LatestJobs = () => {
     const { allJobs } = useSelector(store => store.job);
 
     return (
-        <div className='py-20 bg-gradient-to-b from-white/5 to-transparent'>
+        <div className='py-20'>
             <div className='max-w-7xl mx-auto px-4'>
                 <h1 className='text-4xl font-bold text-center mb-12'>
                     <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text'>Latest & Top </span>

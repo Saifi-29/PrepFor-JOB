@@ -23,31 +23,37 @@ const Home = () => {
   }, [user, navigate]);
 
   return (
-    <div>
-      {/* Show hero section and other content for non-recruiters */}
-      {(!user || user.role === 'student') && (
-        <>
-          <HeroSection />
-          <CategoryCarousel />
-          <LatestJobs />
-          <JobChatbot />
-        </>
-      )}
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Background with animated gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 animate-gradient-x"></div>
       
-      {/* Show test notifications only for logged-in students */}
-      {user?.role === 'student' && (
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2">
-              {/* Other student content */}
-            </div>
-            <div className="md:col-span-1">
-              <TestNotification />
+      {/* Main content */}
+      <div className="relative z-10">
+        {/* Show hero section and other content for non-recruiters */}
+        {(!user || user.role === 'student') && (
+          <>
+            <HeroSection />
+            <CategoryCarousel />
+            <LatestJobs />
+            <JobChatbot />
+          </>
+        )}
+        
+        {/* Show test notifications only for logged-in students */}
+        {user?.role === 'student' && (
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="md:col-span-2">
+                {/* Other student content */}
+              </div>
+              <div className="md:col-span-1">
+                <TestNotification />
+              </div>
             </div>
           </div>
-        </div>
-      )}
-      <Footer />
+        )}
+        <Footer />
+      </div>
     </div>
   )
 }

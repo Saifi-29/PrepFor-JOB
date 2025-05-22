@@ -288,7 +288,7 @@ const HeroSection = () => {
                     <div className="text-center mb-16">
                         <div className="inline-block animate-bounce">
                             <span className="px-6 py-3 rounded-full bg-white/90 text-[#F83002] font-semibold shadow-xl border-2 border-[#F83002]/20">
-                    No. 1 Job Hunt Website
+                    Start Preparing for Jobs 👍
                 </span>
                         </div>
                         

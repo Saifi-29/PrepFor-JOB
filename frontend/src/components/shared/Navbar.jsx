@@ -10,11 +10,13 @@ import { USER_API_END_POINT } from "@/utils/constant";
 import { logout } from "@/redux/authSlice";
 import { toast } from "sonner";
 import NotificationIcon from "./NotificationIcon";
+import { useToast } from "@/hooks/use-toast";
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   const logoutHandler = async () => {
     try {
@@ -50,9 +52,11 @@ const Navbar = () => {
     <div className="bg-gradient-to-r from-[#6A38C2] to-[#9F67E4] shadow-lg">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16">
         <div>
-          <h1 className="text-2xl font-bold text-white">
-            PrepFor<span className="text-[#F83002]">JOB</span>
-          </h1>
+          <Link to="/">
+            <h1 className="text-2xl font-bold text-white">
+              PrepFor<span className="text-[#F83002]">JOB</span>
+            </h1>
+          </Link>
         </div>
         <div className="flex items-center gap-12">
           <ul className="flex font-medium items-center gap-5 text-white">

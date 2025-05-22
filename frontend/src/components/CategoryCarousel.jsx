@@ -22,7 +22,7 @@ const CategoryCarousel = () => {
     }
 
     return (
-        <div className="py-16 bg-gradient-to-b from-transparent to-white/5">
+        <div className="py-16">
             <div className="max-w-7xl mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
                     Popular Categories
